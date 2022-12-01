@@ -1,3 +1,15 @@
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = ">=2.6"
+    }
+  }
+}
+provider "azurerm" {
+  features {}
+}
+
 resource "azurerm_virtual_network" "vnet" {
   address_space       = var.address_space
   location            = var.vnet_location
